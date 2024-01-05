@@ -663,14 +663,14 @@ meningkatkan akurasi model klasifikasi khususnya pada model KNN dan XGBoots, nam
 import pickle
 
 # create an iterator object with write permission - model.pickle
-with open('xgb_tunning_model.pkl', 'wb') as files:
-    pickle.dump(xgb_model, files)
+# with open('xgb_tunning_model.pkl', 'wb') as files:
+#     pickle.dump(xgb_model, files)
 
-with open('rf_normal_model.pkl', 'wb') as files:
-    pickle.dump(rf_model, files)
+# with open('rf_normal_model.pkl', 'wb') as files:
+#     pickle.dump(rf_model, files)
 
-with open('knn_normal_model.pkl', 'wb') as files:
-    pickle.dump(knn_model, files)
+# with open('knn_normal_model.pkl', 'wb') as files:
+#     pickle.dump(knn_model, files)
 
 """#streamlit"""
 
