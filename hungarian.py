@@ -100,24 +100,25 @@ df_final['target'] = y
 
 # STREAMLIT
 st.set_page_config(
-  page_title = "Hungarian Heart Disease",
+  page_title = "Hungarian Heart Disease ",
   page_icon = ":heart:"
 )
 
-st.title("Hungarian Heart Disease")
-st.write(f"**_Model's Accuracy_** :  :green[**{accuracy}**]% (:red[_Marcell_])")
+st.title("Hungarian Heart Disease Detector")
+st.title("A11.2020.12809_Marcell Adi S")
+st.write(f"**_Model's Accuracy_** :  :green[**{accuracy}**]% (:Blue[_Marcell_])")
 st.write("")
 
 tab1, tab2 = st.tabs(["Single-predict", "Multi-predict"])
 
 with tab1:
-  st.sidebar.header("**User Input** Sidebar")
+  st.sidebar.header("**User Input Data** Sidebar")
 
   age = st.sidebar.number_input(label=":violet[**Age**]", min_value=df_final['age'].min(), max_value=df_final['age'].max())
   st.sidebar.write(f":orange[Min] value: :orange[**{df_final['age'].min()}**], :red[Max] value: :red[**{df_final['age'].max()}**]")
   st.sidebar.write("")
 
-  sex_sb = st.sidebar.selectbox(label=":violet[**Sex**]", options=["Male", "Female"])
+  sex_sb = st.sidebar.selectbox(label=":violet[**Gender**]", options=["Male", "Female"])
   st.sidebar.write("")
   st.sidebar.write("")
   if sex_sb == "Male":
@@ -127,7 +128,7 @@ with tab1:
   # -- Value 0: Female
   # -- Value 1: Male
 
-  cp_sb = st.sidebar.selectbox(label=":violet[**Chest pain type**]", options=["Typical angina", "Atypical angina", "Non-anginal pain", "Asymptomatic"])
+  cp_sb = st.sidebar.selectbox(label=":violet[**Tipe Chest pain**]", options=["Typical angina", "Atypical angina", "Non-anginal pain", "Asymptomatic"])
   st.sidebar.write("")
   st.sidebar.write("")
   if cp_sb == "Typical angina":
