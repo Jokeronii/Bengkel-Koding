@@ -17,9 +17,9 @@ import itertools
 """#1.Load Data"""
 
 #masukkan dataset yang dibutuhkan dengan alamat penyimpanan yang tepat dan simpan kedalam sebuah variabel
-dir = '/content/hungarian.data'
+
 #buatlah iterasi untuk membaca dataset
-with open(dir, encoding='Latin1') as file:
+with open("hungarian.data", encoding='Latin1') as file:
   lines = [line.strip() for line in file]
 
 
